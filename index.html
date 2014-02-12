@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>IS 217</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,15 +11,46 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
+	    
+	  <script src="js/test/prettydate.js"></script>
+	  <script>
+	  window.onload = function() {
+	    var links = document.getElementsByTagName("a");
+	    for ( var i = 0; i < links.length; i++ ) {
+	      if ( links[i].title ) {
+	        var date = prettyDate("2008-01-28T22:25:00Z",
+	          links[i].title);
+	        if ( date ) {
+	          links[i].innerHTML = date;
+	        }
+	      }
+	    }
+	  };
+	  </script>
+    
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
+
+			<ul>
+			  <li class="entry">
+			    <p>blah blah blah...</p>
+			    <small class="extra">
+			      Posted <span class="time">
+			        <a href="/2008/01/blah/57/" title="2008-01-28T20:24:17Z">
+			          <span>January 28th, 2008</span>
+			        </a>
+			      </span>
+			      by <span class="author"><a href="/john/">John Resig</a></span>
+			    </small>
+			  </li>
+			  <!-- more list items -->
+			</ul>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
